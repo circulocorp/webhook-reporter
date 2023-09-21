@@ -1,0 +1,43 @@
+{
+  "name": "webhook-receiver",
+  "version": "1.0.0",
+  "description": "Receive webhooks from mailtrap",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "tsc && node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
+  },
+  "keywords": [
+    "webhook",
+    "mailtrap"
+  ],
+  "author": "Eduardo Uriel Velazquez Alvarez",
+  "license": "ISC",
+  "dependencies": {
+    "@types/nodemailer": "^6.4.10",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.5",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.33.0",
+    "typescript": "^5.2.2",
+    "uninstall": "^0.0.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^9.0.3",
+    "@types/morgan": "^1.9.5",
+    "@types/node": "^20.6.3",
+    "@types/node-cron": "^3.0.8",
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1"
+  }
+}
