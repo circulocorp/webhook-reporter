@@ -10,6 +10,7 @@ import auth_router from "../routers/auth.routes";
 import whooks_router from "../routers/whooks.router";
 // Cron jobs
 import send_report_hooks from "../cron/mailer.cron";
+import {send_report_hooks_today} from "../cron/mailer.cron";
 
 
 export class Server extends AbtsractServer
@@ -58,6 +59,7 @@ export class Server extends AbtsractServer
         }
 
         send_report_hooks.start();
+        //send_report_hooks_today.start();
 
         this.application.listen(this.port, () => {
             console.log(`Nos vamos a la luna. 🚀 Servidor corriendo en el puerto: ${this.port}`)

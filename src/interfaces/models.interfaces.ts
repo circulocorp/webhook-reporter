@@ -13,6 +13,7 @@ export interface IModelUser
 
 export interface IModelWHook
 {
+    count?: any;
     uuid?: string;
     event: string;
     category: string;
@@ -21,5 +22,17 @@ export interface IModelWHook
     timestamp: number;
     event_id: string;
     reason?: string;
+    createdAt?: Date;
+    deliveryCount?: number;
+    rejectedCount?: number;
+}
+
+export interface IModelWHookStat
+{
+    uuid?: string;
+    event: string;
+    count: number;
+    event_two?: string;
+    count_two?: number;
     createdAt?: Date;
 }

@@ -50,7 +50,7 @@ WHook.init({
         allowNull: true,
         defaultValue: "Without reason (SPAM)"
     }
-}, 
+},
 {
     sequelize,
     modelName: "WHook"
